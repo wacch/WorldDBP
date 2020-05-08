@@ -25,7 +25,7 @@
 
         Try
             If My.Settings.doCompress Then
-                Dim zips As String() = System.IO.Directory.GetFiles(My.Settings.SaveDir, "*.zip")
+                Dim zips As String() = System.IO.Directory.GetFiles(My.Settings.SaveDir, My.Settings.WorldName + "_*.zip")
                 For i = 0 To zips.Length - 1
                     zips(i) = Replace(zips(i), My.Settings.SaveDir + "\", "")
                 Next
