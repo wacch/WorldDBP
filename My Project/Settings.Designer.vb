@@ -269,6 +269,18 @@ Namespace My
                 Me("firstExecution") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("10")>  _
+        Public Property numofFilecnt() As Integer
+            Get
+                Return CType(Me("numofFilecnt"),Integer)
+            End Get
+            Set
+                Me("numofFilecnt") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

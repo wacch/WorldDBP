@@ -22,6 +22,7 @@ Partial Class Form2
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -35,8 +36,6 @@ Partial Class Form2
         Me.Label10 = New System.Windows.Forms.Label()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.CheckBox7 = New System.Windows.Forms.CheckBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -83,7 +82,18 @@ Partial Class Form2
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.CheckBox9 = New System.Windows.Forms.CheckBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.CheckBox10 = New System.Windows.Forms.CheckBox()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.TabPage3.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -104,6 +114,10 @@ Partial Class Form2
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
+        Me.GroupBox8.SuspendLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -222,9 +236,6 @@ Partial Class Form2
         '
         'GroupBox5
         '
-        Me.GroupBox5.Controls.Add(Me.CheckBox8)
-        Me.GroupBox5.Controls.Add(Me.Label14)
-        Me.GroupBox5.Controls.Add(Me.TextBox5)
         Me.GroupBox5.Controls.Add(Me.Label13)
         Me.GroupBox5.Controls.Add(Me.CheckBox7)
         Me.GroupBox5.Controls.Add(Me.Label8)
@@ -239,23 +250,6 @@ Partial Class Form2
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "機能"
         '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(42, 144)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(38, 12)
-        Me.Label14.TabIndex = 12
-        Me.Label14.Text = "Token:"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(82, 141)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(220, 19)
-        Me.TextBox5.TabIndex = 11
-        Me.TextBox5.UseSystemPasswordChar = True
-        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -263,7 +257,7 @@ Partial Class Form2
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(31, 12)
         Me.Label13.TabIndex = 9
-        Me.Label13.Text = "共有:"
+        Me.Label13.Text = "起動:"
         '
         'CheckBox7
         '
@@ -745,6 +739,7 @@ Partial Class Form2
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.HotTrack = True
         Me.TabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl
@@ -754,15 +749,122 @@ Partial Class Form2
         Me.TabControl1.Size = New System.Drawing.Size(374, 431)
         Me.TabControl1.TabIndex = 0
         '
-        'CheckBox8
+        'TabPage4
         '
-        Me.CheckBox8.AutoSize = True
-        Me.CheckBox8.Location = New System.Drawing.Point(195, 166)
-        Me.CheckBox8.Name = "CheckBox8"
-        Me.CheckBox8.Size = New System.Drawing.Size(107, 16)
-        Me.CheckBox8.TabIndex = 13
-        Me.CheckBox8.Text = "Tokenを表示する"
-        Me.CheckBox8.UseVisualStyleBackColor = True
+        Me.TabPage4.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage4.Controls.Add(Me.GroupBox8)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(366, 405)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "入出力"
+        '
+        'GroupBox8
+        '
+        Me.GroupBox8.Controls.Add(Me.Button8)
+        Me.GroupBox8.Controls.Add(Me.Button7)
+        Me.GroupBox8.Controls.Add(Me.Label17)
+        Me.GroupBox8.Controls.Add(Me.CheckBox9)
+        Me.GroupBox8.Controls.Add(Me.Label15)
+        Me.GroupBox8.Controls.Add(Me.TextBox6)
+        Me.GroupBox8.Controls.Add(Me.Label16)
+        Me.GroupBox8.Controls.Add(Me.CheckBox10)
+        Me.GroupBox8.Controls.Add(Me.PictureBox10)
+        Me.GroupBox8.Location = New System.Drawing.Point(15, 15)
+        Me.GroupBox8.Name = "GroupBox8"
+        Me.GroupBox8.Size = New System.Drawing.Size(334, 372)
+        Me.GroupBox8.TabIndex = 2
+        Me.GroupBox8.TabStop = False
+        Me.GroupBox8.Text = "機能"
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(165, 105)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(113, 23)
+        Me.Button8.TabIndex = 17
+        Me.Button8.Text = "設定を読み込む"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(46, 105)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(113, 23)
+        Me.Button7.TabIndex = 16
+        Me.Button7.Text = "設定を保存"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(44, 90)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(65, 12)
+        Me.Label17.TabIndex = 15
+        Me.Label17.Text = "設定ファイル:"
+        '
+        'CheckBox9
+        '
+        Me.CheckBox9.AutoSize = True
+        Me.CheckBox9.Location = New System.Drawing.Point(210, 73)
+        Me.CheckBox9.Name = "CheckBox9"
+        Me.CheckBox9.Size = New System.Drawing.Size(107, 16)
+        Me.CheckBox9.TabIndex = 13
+        Me.CheckBox9.Text = "Tokenを表示する"
+        Me.CheckBox9.UseVisualStyleBackColor = True
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(44, 51)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(38, 12)
+        Me.Label15.TabIndex = 12
+        Me.Label15.Text = "Token:"
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(84, 48)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(220, 19)
+        Me.TextBox6.TabIndex = 11
+        Me.TextBox6.UseSystemPasswordChar = True
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(44, 15)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(31, 12)
+        Me.Label16.TabIndex = 9
+        Me.Label16.Text = "共有:"
+        '
+        'CheckBox10
+        '
+        Me.CheckBox10.AutoSize = True
+        Me.CheckBox10.Location = New System.Drawing.Point(46, 30)
+        Me.CheckBox10.Name = "CheckBox10"
+        Me.CheckBox10.Size = New System.Drawing.Size(198, 16)
+        Me.CheckBox10.TabIndex = 8
+        Me.CheckBox10.Text = "バックアップ状況をDiscordに共有する"
+        Me.CheckBox10.UseVisualStyleBackColor = True
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox10.Image = Global.WorldDBP.My.Resources.Resources.Icon_143
+        Me.PictureBox10.Location = New System.Drawing.Point(6, 17)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(32, 32)
+        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox10.TabIndex = 3
+        Me.PictureBox10.TabStop = False
+        '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
         '
         'Form2
         '
@@ -806,6 +908,11 @@ Partial Class Form2
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
+        Me.TabPage4.ResumeLayout(False)
+        Me.GroupBox8.ResumeLayout(False)
+        Me.GroupBox8.PerformLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -864,10 +971,19 @@ Partial Class Form2
     Friend WithEvents Label12 As Label
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents CheckBox6 As CheckBox
-    Friend WithEvents Label14 As Label
-    Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents CheckBox7 As CheckBox
     Friend WithEvents PictureBox9 As PictureBox
-    Friend WithEvents CheckBox8 As CheckBox
+    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents GroupBox8 As GroupBox
+    Friend WithEvents CheckBox9 As CheckBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents CheckBox10 As CheckBox
+    Friend WithEvents PictureBox10 As PictureBox
+    Friend WithEvents Button8 As Button
+    Friend WithEvents Button7 As Button
+    Friend WithEvents Label17 As Label
+    Friend WithEvents ErrorProvider1 As ErrorProvider
 End Class

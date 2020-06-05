@@ -1,4 +1,6 @@
-﻿Public Class Form2
+﻿Imports System.ComponentModel
+
+Public Class Form2
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Debug.WriteLine("ph1")
         Dim Dir As String = OpenDirSlDia()
@@ -90,6 +92,7 @@
         My.Settings.showNotification = CheckBox3.Checked
         My.Settings.donotBackup = CheckBox4.Checked
         My.Settings.debug = CheckBox5.Checked
+        My.Settings.numofFilecnt = Integer.Parse(TextBox4.Text)
         My.Settings.Save()
         Close()
     End Sub
@@ -137,5 +140,20 @@
             End If
         Next
         mode = 0
+    End Sub
+
+    Private Sub TextBox4_Validating(sender As Object, e As CancelEventArgs) Handles TextBox4.Validating
+        If Not IsNumeric(TextBox4.Text) Then
+            MessageBox.Show("保存件数には数字を指定してください", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            e.Cancel = True
+        End If
+    End Sub
+
+    Private Sub CheckBox6_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox6.CheckedChanged
+        If CheckBox6.Checked Then
+            TextBox4.Enabled = True
+        Else
+            TextBox4.Enabled = False
+        End If
     End Sub
 End Class

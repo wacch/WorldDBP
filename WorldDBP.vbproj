@@ -103,6 +103,7 @@
   <ItemGroup>
     <Compile Include="DateManage.vb" />
     <Compile Include="Dir.vb" />
+    <Compile Include="FileManage.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +167,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Resources\FileRemoveTool.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="wdbp.pfx" />
   </ItemGroup>

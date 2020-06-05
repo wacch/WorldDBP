@@ -3,6 +3,7 @@
     Dim Time As String
     Dim dm As New DateManage
     Dim dir As New Dir
+    Dim fm As New FileManage
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Dim dt As Date = Date.Now
@@ -12,10 +13,12 @@
                 dir.Backup(Time)
             End If
         End If
-            Label7.Text = dt.ToString("MM/dd(ddd)" & vbCrLf & "HH:mm:ss")
+
+        Label7.Text = dt.ToString("MM/dd(ddd)" & vbCrLf & "HH:mm:ss")
         Time = dt.ToString("yy_MMdd_HHmm_ddd")
         dm.UpdateNextBuDay()
         Label2.Text = My.Settings.nextBackup.ToString("MM/dd(ddd)" & vbCrLf & "HH:mm:ss")
+        fm.FileRm(My.Settings.numofFilecnt, My.Settings.SaveDir, My.Settings.WorldName)
         'Debug.WriteLine(My.Settings.nextBackup + "," + dt)
     End Sub
 
