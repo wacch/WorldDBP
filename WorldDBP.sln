@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WorldDBP", "WorldDBP\WorldDBP.vbproj", "{4998A0D8-AA5D-4D1C-9E72-CE2377416E19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WDBP_BOT", "WDBP_BOT\WDBP_BOT.csproj", "{43326FDE-95C5-4714-88AC-CAE6E3DCB594}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4998A0D8-AA5D-4D1C-9E72-CE2377416E19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4998A0D8-AA5D-4D1C-9E72-CE2377416E19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4998A0D8-AA5D-4D1C-9E72-CE2377416E19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4998A0D8-AA5D-4D1C-9E72-CE2377416E19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43326FDE-95C5-4714-88AC-CAE6E3DCB594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43326FDE-95C5-4714-88AC-CAE6E3DCB594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43326FDE-95C5-4714-88AC-CAE6E3DCB594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43326FDE-95C5-4714-88AC-CAE6E3DCB594}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C390A6D6-0BA0-4D34-A27A-90B7A1AD223D}
+	EndGlobalSection
+EndGlobal
