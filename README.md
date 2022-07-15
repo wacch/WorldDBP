@@ -1,6 +1,6 @@
 WorldDBP v1.0β README
 ---------------------------------
-Spigot/Paper環境下においてAutoSaveWorld/AutoBuckupWorld等のワールドセーブ・バックアッププラグインが使用できない方向けの外部ツールになります。
+Spigot/PaperかつWindowsOS環境下においてAutoSaveWorld/AutoBuckupWorld等のワールドセーブ・バックアッププラグインが使用できない方向けの外部ツールになります。
 対応バージョン（2022/1現在）：全てのRelease（MC1.0.0~MC1.18.1）
 
 【利用規約】
